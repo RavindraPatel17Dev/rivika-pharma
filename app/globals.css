@@ -213,3 +213,16 @@
     animation: none;
   }
 }
+
+
+/* 🔥 MOBILE DARK MODE FORCE FIX */
+@media (prefers-color-scheme: dark) {
+  html, body {
+    background-color: white !important;
+    color: black !important;
+  }
+
+  :root {
+    color-scheme: light !important;
+  }
+}
