@@ -48,8 +48,10 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${jakarta.variable} ${manrope.variable} bg-background`}>
-      <body className="font-sans antialiased">
+    // <html lang="en" className={`${jakarta.variable} ${manrope.variable} bg-background`}>
+    <html lang="en"className={`${jakarta.variable} ${manrope.variable} bg-white`}>
+      {/* <body className="font-sans antialiased"> */}
+      <body className="font-sans antialiased bg-white text-black">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

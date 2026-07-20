@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { AtSign, Globe, MessageCircle, Share2 } from 'lucide-react'
 import { DIVISIONS, NAV_LINKS } from '@/lib/site-data'
+import Link from "next/link";
 
 const SOCIALS = [
   { icon: Globe, label: 'LinkedIn', href: '#' },
@@ -14,6 +15,8 @@ export function SiteFooter() {
     <footer className="bg-primary text-primary-foreground">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+          
+          {/* ✅ LOGO + TEXT */}
           <div className="lg:col-span-1">
             <div className="inline-flex rounded-xl bg-background p-3">
               <Image
@@ -24,10 +27,13 @@ export function SiteFooter() {
                 className="h-11 w-auto object-contain"
               />
             </div>
+
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-primary-foreground/70">
               Trusted, affordable and high-quality medicines - delivering healthier lives
               to communities everywhere.
             </p>
+
+            {/* ✅ SOCIAL ICONS (BACK) */}
             {/* <div className="mt-6 flex gap-3">
               {SOCIALS.map((social) => (
                 <a
@@ -42,55 +48,69 @@ export function SiteFooter() {
             </div> */}
           </div>
 
+          {/* ✅ QUICK LINKS FIXED */}
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-primary-foreground/60">
               Quick Links
             </h3>
+
             <ul className="mt-5 space-y-3">
               {NAV_LINKS.map((link) => (
                 <li key={link.href}>
-                  <a
-                    href={link.href}
+                  {/* 🔥 FIX: ALWAYS GO HOME */}
+                  <Link
+                    href={`/#${link.href.replace("#", "")}`}
                     className="text-sm text-primary-foreground/80 transition-colors hover:text-accent-orange"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
 
+          {/* ✅ DIVISIONS FIXED */}
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-primary-foreground/60">
               Divisions
             </h3>
+
             <ul className="mt-5 space-y-3">
               {DIVISIONS.slice(0, 5).map((division) => (
                 <li key={division.name}>
-                  <a
-                    href="#divisions"
+                  <Link
+                    href="/#divisions"
                     className="text-sm text-primary-foreground/80 transition-colors hover:text-accent-orange"
                   >
                     {division.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
 
+          {/* ✅ CONTACT */}
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-primary-foreground/60">
               Registered Office
             </h3>
+
             <ul className="mt-5 space-y-3 text-sm text-primary-foreground/80">
-              <li>B-02 / 702, Tapti Parisar, Phase-01
-                Sindoda, Pigdamber, Indore (Mhow)
-                Madhya Pradesh - 453331, India</li>
               <li>
-                <a href="tel:18008910031" className="transition-colors hover:text-accent-orange">
+                B-02 / 702, Tapti Parisar, Phase-01
+                Sindoda, Pigdamber, Indore (Mhow)
+                Madhya Pradesh - 453331, India
+              </li>
+
+              <li>
+                <a
+                  href="tel:9826440373"
+                  className="transition-colors hover:text-accent-orange"
+                >
                   Mob: 9826440373
                 </a>
               </li>
+
               <li>
                 <a
                   href="mailto:rivikapharma@gmail.com"
@@ -103,9 +123,11 @@ export function SiteFooter() {
           </div>
         </div>
 
+        {/* ✅ BOTTOM */}
         <div className="mt-14 flex flex-col items-center justify-center gap-4 border-t border-primary-foreground/15 pt-8 text-sm text-primary-foreground/60 text-center">
-          <p>© {new Date().getFullYear()} RIVIKA PHARMA PRIVATE LIMITED. All rights reserved.</p>
-
+          <p>
+            © {new Date().getFullYear()} RIVIKA PHARMA PRIVATE LIMITED. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
