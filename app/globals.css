@@ -2,7 +2,7 @@
 @import 'tw-animate-css';
 @import 'shadcn/tailwind.css';
 
-@custom-variant dark (&:is(.dark *));
+/* @custom-variant dark (&:is(.dark *)); */
 
 @theme inline {
   --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
@@ -92,7 +92,7 @@
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
 }
-
+/* 
 .dark {
   color-scheme: dark;
   --background: oklch(0.145 0 0);
@@ -126,9 +126,9 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
-}
+} */
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root:not(.light) {
     color-scheme: dark;
     --background: oklch(0.145 0 0);
@@ -163,7 +163,7 @@
     --sidebar-border: oklch(1 0 0 / 10%);
     --sidebar-ring: oklch(0.556 0 0);
   }
-}
+} */
 
 @layer base {
   * {
@@ -215,14 +215,26 @@
 }
 
 
-/* 🔥 MOBILE DARK MODE FORCE FIX */
-@media (prefers-color-scheme: dark) {
-  html, body {
-    background-color: white !important;
-    color: black !important;
-  }
+/* ✅ FORCE LIGHT MODE EVERYWHERE (MOBILE FIX FINAL) */
 
+/* Disable dark mode detection completely */
+html {
+  color-scheme: light !important;
+}
+
+/* Remove system dark mode effect */
+@media (prefers-color-scheme: dark) {
   :root {
     color-scheme: light !important;
   }
+
+  html, body {
+    background: white !important;
+    color: black !important;
+  }
+}
+
+/* Ensure Tailwind dark class never works */
+.dark {
+  all: unset !important;
 }

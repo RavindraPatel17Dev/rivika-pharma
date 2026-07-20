@@ -36,10 +36,16 @@ export const metadata: Metadata = {
   },
 }
 
+// export const viewport: Viewport = {
+//   themeColor: '#0f2b5b',
+//   width: 'device-width',
+//   initialScale: 1,
+// }
+
 export const viewport: Viewport = {
-  themeColor: '#0f2b5b',
   width: 'device-width',
   initialScale: 1,
+  themeColor: '#ffffff', // 🔥 FORCE LIGHT UI
 }
 
 export default function RootLayout({
@@ -49,11 +55,20 @@ export default function RootLayout({
 }>) {
   return (
     // <html lang="en" className={`${jakarta.variable} ${manrope.variable} bg-background`}>
-    <html lang="en"className={`${jakarta.variable} ${manrope.variable} bg-white`}>
-      {/* <body className="font-sans antialiased"> */}
-      <body className="font-sans antialiased bg-white text-black">
+    // <html lang="en"className={`${jakarta.variable} ${manrope.variable} bg-white`}>
+    //   {/* <body className="font-sans antialiased"> */}
+    //   <body className="font-sans antialiased bg-white text-black">
+    //     {children}
+    //     {process.env.NODE_ENV === 'production' && <Analytics />}
+    //   </body>
+    // </html>
+
+    <html lang="en" className="light">
+      <head>
+        <meta name="color-scheme" content="light" />
+      </head>
+      <body className="bg-white text-black">
         {children}
-        {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
   )
