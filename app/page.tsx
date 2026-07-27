@@ -1,27 +1,19 @@
-import { SiteHeader } from '@/components/site-header'
-import { Hero } from '@/components/hero'
-import { StatsBar } from '@/components/stats-bar'
-import { AboutSection } from '@/components/about-section'
-import { DivisionsSection } from '@/components/divisions-section'
-import { QualitySection } from '@/components/quality-section'
-import { ResearchSection } from '@/components/research-section'
-import { ContactSection } from '@/components/contact-section'
-import { SiteFooter } from '@/components/site-footer'
+import { Hero } from '@/components/home/hero'
+import { StatsBar } from '@/components/home/stats-bar'
+import { DivisionsGrid } from '@/components/divisions-grid'
+import { FeaturedProducts } from '@/components/home/featured-products'
+import { WhyChoose } from '@/components/home/why-choose'
+import { CtaBand } from '@/components/home/cta-band'
 
 export default function HomePage() {
   return (
     <>
-      <SiteHeader />
-      <main>
-        <Hero />
-        <StatsBar />
-        <AboutSection />
-        <DivisionsSection />
-        <QualitySection />
-        <ResearchSection />
-        <ContactSection />
-      </main>
-      <SiteFooter />
+      <Hero />
+      <StatsBar />
+      <DivisionsGrid />
+      <FeaturedProducts />
+      <WhyChoose />
+      <CtaBand />
     </>
   )
 }

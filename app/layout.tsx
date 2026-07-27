@@ -1,51 +1,44 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
-import { Manrope, Plus_Jakarta_Sans } from 'next/font/google'
+import { Inter, Poppins } from 'next/font/google'
+import { SiteHeader } from '@/components/site-header'
+import { SiteFooter } from '@/components/site-footer'
 import './globals.css'
 
-const jakarta = Plus_Jakarta_Sans({
+const inter = Inter({
   subsets: ['latin'],
-  variable: '--font-sans',
+  variable: '--font-inter',
   display: 'swap',
 })
 
-const manrope = Manrope({
+const poppins = Poppins({
   subsets: ['latin'],
-  variable: '--font-serif',
+  weight: ['500', '600', '700', '800'],
+  variable: '--font-poppins',
   display: 'swap',
 })
 
 export const metadata: Metadata = {
-  title: 'Rivika Pharma | Trusted Medicines for Healthier Lives',
+  title: {
+    default: 'Rivika Pharma Private Limited | Caring Beyond Medicine',
+    template: '%s | Rivika Pharma',
+  },
   description:
-    'Rivika Pharma is a modern pharmaceutical company delivering high-quality, affordable and accessible medicines across cardiology, neurology, gynaecology, nutraceuticals and more.',
+    'Rivika Pharma Private Limited, Indore — a Made in India pharmaceutical company delivering quality, affordable medicines across gastro, anti-infective, respiratory, neuro, ortho, paediatric and wellness therapies.',
   keywords: [
     'Rivika Pharma',
-    'pharmaceutical company',
-    'medicines',
-    'healthcare',
-    'quality medicines',
-    'pharma India',
+    'pharmaceutical company India',
+    'Indore pharma',
+    'Made in India medicines',
+    'PANZORIV-DSR',
+    'MOXRIV-CV 625',
   ],
   generator: 'v0.app',
-  openGraph: {
-    title: 'Rivika Pharma | Trusted Medicines for Healthier Lives',
-    description:
-      'High-quality, affordable and accessible medicines backed by science and rigorous quality standards.',
-    type: 'website',
-  },
 }
 
-// export const viewport: Viewport = {
-//   themeColor: '#0f2b5b',
-//   width: 'device-width',
-//   initialScale: 1,
-// }
-
 export const viewport: Viewport = {
-  width: 'device-width',
-  initialScale: 1,
-  themeColor: '#ffffff', // 🔥 FORCE LIGHT UI
+  colorScheme: 'light',
+  themeColor: '#0e2f6e',
 }
 
 export default function RootLayout({
@@ -54,21 +47,12 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    // <html lang="en" className={`${jakarta.variable} ${manrope.variable} bg-background`}>
-    // <html lang="en"className={`${jakarta.variable} ${manrope.variable} bg-white`}>
-    //   {/* <body className="font-sans antialiased"> */}
-    //   <body className="font-sans antialiased bg-white text-black">
-    //     {children}
-    //     {process.env.NODE_ENV === 'production' && <Analytics />}
-    //   </body>
-    // </html>
-
-    <html lang="en" className="light">
-      <head>
-        <meta name="color-scheme" content="light" />
-      </head>
-      <body className="bg-white text-black">
-        {children}
+    <html lang="en" className={`light ${inter.variable} ${poppins.variable}`}>
+      <body className="bg-background font-sans antialiased">
+        <SiteHeader />
+        <main>{children}</main>
+        <SiteFooter />
+        {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
   )
