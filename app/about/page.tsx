@@ -7,7 +7,7 @@ import { company } from '@/lib/data'
 export const metadata: Metadata = {
   title: 'About Us',
   description:
-    'Rivika Pharma Private Limited is an Indore-based, Made in India pharmaceutical company committed to quality, affordable healthcare — caring beyond medicine.',
+    'Rivika Pharma Private Limited is a Central India–based, Made in India pharmaceutical company committed to quality, affordable healthcare — caring beyond medicine.',
 }
 
 const values = [
@@ -37,7 +37,7 @@ export default function AboutPage() {
             </h2>
             <div className="mt-5 space-y-4 text-muted-foreground">
               <p>
-                {company.name} is an Indore-based pharmaceutical company
+                {company.name} is an Central India pharmaceutical company
                 dedicated to making quality, affordable medicines available to
                 families across India. We market a thoughtfully curated range of
                 formulations manufactured by trusted, certified bulk

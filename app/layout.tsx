@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: '%s | Rivika Pharma',
   },
   description:
-    'Rivika Pharma Private Limited, Indore — a Made in India pharmaceutical company delivering quality, affordable medicines across gastro, anti-infective, respiratory, neuro, ortho, paediatric and wellness therapies.',
+    'Rivika Pharma Private Limited is a Central India–based — a Made in India pharmaceutical company delivering quality, affordable medicines across gastro, anti-infective, respiratory, neuro, ortho, paediatric and wellness therapies.',
   keywords: [
     'Rivika Pharma',
     'pharmaceutical company India',
