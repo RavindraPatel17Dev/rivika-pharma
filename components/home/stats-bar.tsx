@@ -3,7 +3,7 @@ const stats = [
   { value: 'ISO 9001:2015', label: 'Quality Standards' },
   { value: 'FSSAI', label: 'Approved' },
   
-  { value: '100%', label: 'Made in India' },
+  { value: 'Made in India', label: '100%' },
 ]
 
 export function StatsBar() {

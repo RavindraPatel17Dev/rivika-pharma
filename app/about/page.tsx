@@ -83,12 +83,11 @@ export default function AboutPage() {
               ethical practices.
             </p>
           </div>
-          <div className="rounded-3xl bg-card p-8 shadow-sm md:p-10">
+
+           <div className="rounded-3xl bg-brand-navy p-8 text-white md:p-10">
             <Eye className="h-8 w-8 text-brand-orange" />
-            <h3 className="mt-4 font-heading text-2xl font-bold text-brand-navy">
-              Our Vision
-            </h3>
-            <p className="mt-3 text-muted-foreground">
+            <h3 className="mt-4 font-heading text-2xl font-bold">Our Vision</h3>
+            <p className="mt-3 text-white/80">
               To become a trusted name in Indian healthcare, recognised for
               quality, integrity and a patient-first approach that extends
               beyond medicine.

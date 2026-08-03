@@ -14,8 +14,12 @@ const slides = [
     title: "Caring Beyond Medicine",
   },
   {
+    img: "/hero-quality.png",
+    title: "Certified Quality",
+  },
+  {
     img: "/hero-target.png",
-    title: "Our Target This Year",
+    title: "Advancing Toward Excellence",
   },
 ];
 
