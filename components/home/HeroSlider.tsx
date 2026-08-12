@@ -10,23 +10,23 @@ import "swiper/css/effect-fade";
 
 const slides = [
   {
-    img: "/hero-reception.png",
+    img: "/hero-reception.jpeg",
     title: "Caring Beyond Medicine",
   },
   {
-    img: "/hero-quality.png",
+    img: "/hero-quality.jpeg",
     title: "Certified Quality",
   },
   {
-    img: "/hero-target.png",
-    title: "Advancing Toward Excellence",
+    img: "/hero-target.jpeg",
+    title: "Our Objective Towards",
   },
 ];
 
 export default function HeroSlider() {
   return (
     <div className="relative w-full h-[45vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] overflow-hidden">
-      
+
       <Swiper
         modules={[Pagination, Autoplay, EffectFade]}
         effect="fade"
@@ -38,7 +38,7 @@ export default function HeroSlider() {
         {slides.map((slide, i) => (
           <SwiperSlide key={i}>
             <div className="relative w-full h-[45vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh]">
-              
+
               {/* Image */}
               <Image
                 src={slide.img}
@@ -53,7 +53,7 @@ export default function HeroSlider() {
 
               {/* Text */}
               <div className="absolute bottom-6 left-4 sm:left-6 md:left-12 text-white max-w-xl">
-                <h1 className="text-lg sm:text-xl md:text-3xl lg:text-5xl font-bold leading-tight">
+                <h1 className="text-base sm:text-lg md:text-2xl lg:text-4xl italic font-semibold tracking-wide leading-tight">
                   {slide.title}
                 </h1>
               </div>

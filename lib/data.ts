@@ -25,16 +25,9 @@ export const divisions: Division[] = [
     short: 'Acidity, digestion & gut care',
     description:
       'Formulations that address acidity, heartburn, indigestion and gut-flora balance for everyday digestive comfort.',
-    image: '/divisions/gastro.jpg',
+    image: '/divisions/gastro.jpeg',
   },
-  {
-    slug: 'anti-microbial',
-    name: 'Anti-Microbial',
-    short: 'Broad-spectrum infection control',
-    description:
-      'Broad-spectrum anti-infectives designed for effective, responsible management of bacterial infections.',
-    image: '/divisions/antimicrobial.jpg',
-  },
+  
   {
     slug: 'respiratory-allergy',
     name: 'Respiratory & Allergy',
@@ -49,7 +42,7 @@ export const divisions: Division[] = [
     short: 'Nerve nourishment & neuro support',
     description:
       'Neurotropic and nerve-support therapies that nourish nerves, ease neuropathic discomfort and support overall neural health.',
-    image: '/divisions/neuro.jpg',
+    image: '/divisions/neuro.jpeg',
   },
   {
     slug: 'orthopaedic',
@@ -73,7 +66,7 @@ export const divisions: Division[] = [
     short: 'Women & bone wellness',
     description:
       'Nutritional and bone-health support tailored to women’s wellness across every stage of life.',
-    image: '/divisions/gynecology.jpg',
+    image: '/divisions/gynecology.jpeg',
   },
   {
     slug: 'nutraceutical-wellness',
@@ -82,6 +75,14 @@ export const divisions: Division[] = [
     description:
       'Multivitamins, minerals and antioxidants that support immunity, energy and overall vitality.',
     image: '/divisions/wellness.png',
+  },
+  {
+    slug: 'anti-microbial',
+    name: 'General Physician',
+    short: 'Broad-spectrum infection control',
+    description:
+      'Broad-spectrum anti-infectives designed for effective, responsible management of bacterial infections.',
+    image: '/divisions/antimicrobial.jpeg',
   },
 ]
 
@@ -98,7 +99,7 @@ export const products: Product[] = [
       'Reduces Nausea & Vomiting',
       'Improves Digestion',
     ],
-    divisions: ['gastro-intestinal'],
+    divisions: ['gastro-intestinal','gynaecology','neuro-psychiatric','respiratory-allergy','orthopaedic','anti-microbial'],
     image: '/products/panzoriv-dsr.jpg',
   },
   {
@@ -113,8 +114,8 @@ export const products: Product[] = [
       'Reduces Fever',
       'Effective for Body Aches',
     ],
-    divisions: ['orthopaedic'],
-    image: '/products/dolovik-sp.jpg',
+    divisions: ['orthopaedic','gynaecology','neuro-psychiatric','anti-microbial'],
+    image: '/products/dolovik-sp.jpeg',
   },
   {
     slug: 'vitozest',
@@ -129,7 +130,7 @@ export const products: Product[] = [
       'Fights Fatigue & Weakness',
       'Improves Appetite',
     ],
-    divisions: ['nutraceutical-wellness', 'paediatric'],
+    divisions: ['nutraceutical-wellness', 'gynaecology', 'paediatric','neuro-psychiatric','respiratory-allergy','gastro-intestinal','orthopaedic','anti-microbial'],
     image: '/products/vitozest.jpg',
   },
   {
@@ -144,7 +145,7 @@ export const products: Product[] = [
       'Reduces Itching & Watery Eyes',
       'Provides Long-lasting Relief',
     ],
-    divisions: ['respiratory-allergy', 'paediatric'],
+    divisions: ['respiratory-allergy', 'paediatric','anti-microbial'],
     image: '/products/montivik-l-suspension.jpg',
   },
   {
@@ -159,8 +160,8 @@ export const products: Product[] = [
       'Reduces Inflammation',
       'Gentle on Stomach',
     ],
-    divisions: ['paediatric', 'orthopaedic'],
-    image: '/products/kidriv-p.jpg',
+    divisions: ['paediatric','anti-microbial'],
+    image: '/products/kidriv-p.jpeg',
   },
   {
     slug: 'montivik-l-tablets',
@@ -174,8 +175,8 @@ export const products: Product[] = [
       'Reduces Itching & Watery Eyes',
       'Provides Long-lasting Relief',
     ],
-    divisions: ['respiratory-allergy'],
-    image: '/products/montivik-l-tablets.jpg',
+    divisions: ['respiratory-allergy','anti-microbial'],
+    image: '/products/montivik-l-tablets.jpeg',
   },
   {
     slug: 'moxriv-cv-625',
@@ -190,8 +191,8 @@ export const products: Product[] = [
       'Restores Gut Flora Balance',
       'Improves Immunity',
     ],
-    divisions: ['anti-microbial', 'gastro-intestinal'],
-    image: '/products/moxriv-cv-625.jpg',
+    divisions: ['anti-microbial','gynaecology','neuro-psychiatric','respiratory-allergy','orthopaedic'],
+    image: '/products/moxriv-cv-625.jpeg',
   },
   {
     slug: 'myeloriv-plus',
@@ -206,7 +207,7 @@ export const products: Product[] = [
       'Helps Relieve Nerve Pain & Tingling',
       'Reduces Oxidative Stress',
     ],
-    divisions: ['neuro-psychiatric'],
+    divisions: ['neuro-psychiatric','gynaecology','orthopaedic','anti-microbial'],
     image: '/products/myeloriv-plus.jpg',
   },
   {
@@ -221,7 +222,7 @@ export const products: Product[] = [
       'Supports Bone Density',
       'Helps Prevent Osteoporosis',
     ],
-    divisions: ['orthopaedic', 'gynaecology', 'nutraceutical-wellness'],
+    divisions: ['orthopaedic', 'gynaecology', 'nutraceutical-wellness', 'anti-microbial'],
     image: '/products/osteoriv.jpg',
   },
 ]
@@ -234,7 +235,7 @@ export const company = {
   dl: '21B/2508/17/2026',
   fssai: '11426130000051',
   address:
-    'B-02 / 702, Tapti Parisar, Phase-01 Sindoda, Pigdamber, Indore (Mhow), Madhya Pradesh – 453331, India',
+    'B-02 / 702, Tapti Parisar, Phase-01 Sindoda, Pigdamber, Indore, Madhya Pradesh – 453331, India',
   email: 'rivikapharma@gmail.com',
 }
 

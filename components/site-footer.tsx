@@ -1,9 +1,14 @@
+'use client'
+
 import Link from 'next/link'
 import Image from 'next/image'
 import { MapPin, Mail, Phone } from 'lucide-react'
 import { company, divisions } from '@/lib/data'
+import { useState } from 'react'
 
 export function SiteFooter() {
+  const [showDisclaimer, setShowDisclaimer] = useState(false)
+
   return (
     <footer className="bg-brand-navy-deep text-white/80">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 md:px-6 lg:grid-cols-4">
@@ -66,17 +71,47 @@ export function SiteFooter() {
                 {company.email}
               </a>
             </li>
-           
+
           </ul>
         </div>
       </div>
 
       <div className="border-t border-white/10">
-        <div className="mx-auto max-w-7xl px-4 py-6 md:px-6">
+        <div className="mx-auto max-w-7xl px-4 py-5 md:px-6">
 
-          <p className="mt-2 text-xs text-white/50 text-center">        
-              © {new Date().getFullYear()} {company.name}. All rights reserved. Proudly Made in India.
-          </p>
+          <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
+
+            {/* Copyright */}
+            <p className="text-center text-xs text-white/50 sm:text-left">
+              © {new Date().getFullYear()} {company.name}. All rights reserved.
+              Proudly Made in India.
+            </p>
+
+            {/* Disclaimer Button */}
+            <button
+              type="button"
+              onClick={() => setShowDisclaimer(!showDisclaimer)}
+              className="shrink-0 text-[10px] font-semibold uppercase tracking-wider text-brand-orange transition hover:text-white"
+            >
+              Important Disclaimer
+              <span className="ml-2 inline-block">
+                {showDisclaimer ? '−' : '+'}
+              </span>
+            </button>
+
+          </div>
+
+          {/* Expanded Disclaimer */}
+          {showDisclaimer && (
+            <div className="mt-4 border-t border-white/10 pt-4">
+              <p className="mx-auto max-w-4xl text-center text-xs leading-relaxed text-white/50">
+                Prescription medicines should be used strictly under the advice of a
+                Registered Medical Practitioner. Product information available on this
+                website is intended for informational purposes only and should not be
+                considered as medical advice.
+              </p>
+            </div>
+          )}
 
         </div>
       </div>

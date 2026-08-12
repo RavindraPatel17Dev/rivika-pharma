@@ -3,10 +3,10 @@
 import Image from 'next/image'
 
 const brands = [
-    { image: '/brands/brand_one.png' },
-    { image: '/products/kidriv-p.jpg' },
-    { image: '/products/kidriv-p.jpg' },
-    { image: '/brands/brand_one.png' },
+    { image: '/brands/brand_one.jpeg' },
+    { image: '/brands/brand_two.jpeg' },
+    { image: '/brands/brand_three.jpeg' },
+    { image: '/brands/brand_four.jpeg' },
 ]
 
 export function OurBrands() {

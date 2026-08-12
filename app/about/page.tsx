@@ -59,9 +59,9 @@ export default function AboutPage() {
             </div>
           </div>
           <div className="overflow-hidden rounded-3xl shadow-xl ring-1 ring-border">
-            <div className="relative aspect-[4/3] w-full">
+            <div className="relative aspect-[4/2.5] w-full">
               <Image
-                src="/hero-reception.png"
+                src="/hero-reception.jpeg"
                 alt="Rivika Pharma office"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -99,7 +99,7 @@ export default function AboutPage() {
       <section className="mx-auto max-w-7xl px-4 py-14 md:px-6 md:py-16">
         <div className="mx-auto mb-12 max-w-2xl text-center">
           <p className="font-heading text-sm font-semibold uppercase tracking-widest text-brand-orange">
-            Our Values
+            Our Core Values
           </p>
           <h2 className="mt-3 font-heading text-3xl font-bold text-brand-navy md:text-4xl">
             What Drives Us Every Day
