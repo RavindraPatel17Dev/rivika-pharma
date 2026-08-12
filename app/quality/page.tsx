@@ -30,7 +30,7 @@ export default function QualityPage() {
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <div className="grid grid-cols-2 gap-4">
             <div className="overflow-hidden rounded-2xl shadow-md ring-1 ring-border">
-              <div className="relative aspect-[3/4] w-full">
+              <div className="relative aspect-[3/4.3] w-full">
                 <Image src="/lab/lab-3.jpg" alt="Quality inspection on production line" fill sizes="25vw" className="object-cover" />
               </div>
             </div>
