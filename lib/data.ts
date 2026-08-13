@@ -84,6 +84,7 @@ export const divisions: Division[] = [
       'Broad-spectrum anti-infectives designed for effective, responsible management of bacterial infections.',
     image: '/divisions/antimicrobial.jpeg',
   },
+  
 ]
 
 export const products: Product[] = [
