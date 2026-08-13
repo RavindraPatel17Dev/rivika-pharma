@@ -100,7 +100,7 @@ export const products: Product[] = [
       'Improves Digestion',
     ],
     divisions: ['gastro-intestinal','gynaecology','neuro-psychiatric','respiratory-allergy','orthopaedic','anti-microbial'],
-    image: '/products/panzoriv-dsr.jpg',
+    image: '/products/panzoriv-dsr.jpeg',
   },
   {
     slug: 'dolovik-sp',
@@ -131,7 +131,7 @@ export const products: Product[] = [
       'Improves Appetite',
     ],
     divisions: ['nutraceutical-wellness', 'gynaecology', 'paediatric','neuro-psychiatric','respiratory-allergy','gastro-intestinal','orthopaedic','anti-microbial'],
-    image: '/products/vitozest.jpg',
+    image: '/products/vitozest.jpeg',
   },
   {
     slug: 'montivik-l-suspension',
@@ -146,7 +146,7 @@ export const products: Product[] = [
       'Provides Long-lasting Relief',
     ],
     divisions: ['respiratory-allergy', 'paediatric','anti-microbial'],
-    image: '/products/montivik-l-suspension.jpg',
+    image: '/products/montivik-l-suspension.jpeg',
   },
   {
     slug: 'kidriv-p',
@@ -208,7 +208,7 @@ export const products: Product[] = [
       'Reduces Oxidative Stress',
     ],
     divisions: ['neuro-psychiatric','gynaecology','orthopaedic','anti-microbial'],
-    image: '/products/myeloriv-plus.jpg',
+    image: '/products/myeloriv-plus.jpeg',
   },
   {
     slug: 'osteoriv',
@@ -223,7 +223,7 @@ export const products: Product[] = [
       'Helps Prevent Osteoporosis',
     ],
     divisions: ['orthopaedic', 'gynaecology', 'nutraceutical-wellness', 'anti-microbial'],
-    image: '/products/osteoriv.jpg',
+    image: '/products/osteoriv.jpeg',
   },
 ]
 
