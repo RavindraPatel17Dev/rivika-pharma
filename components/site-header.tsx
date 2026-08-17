@@ -26,7 +26,7 @@ export function SiteHeader() {
         {/* ✅ BIG LOGO */}
         <Link href="/" className="flex items-center z-10">
           <Image
-            src="/logo.jpg"
+            src="/logo.jpeg"
             alt="Rivika Pharma"
             width={280}
             height={150}

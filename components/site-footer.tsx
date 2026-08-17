@@ -15,7 +15,7 @@ export function SiteFooter() {
         <div className="lg:col-span-1">
           <div className="inline-flex rounded-lg bg-white p-3">
             <Image
-              src="/logo.jpg"
+              src="/logo.jpeg"
               alt="Rivika Pharma"
               width={280}
               height={150}
