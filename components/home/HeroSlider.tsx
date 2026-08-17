@@ -17,10 +17,10 @@ const slides = [
     img: "/hero-quality.jpeg",
     title: "Certified Quality",
   },
-  {
-    img: "/hero-target.jpeg",
-    title: "Our Objective Towards",
-  },
+  // {
+  //   img: "/hero-target.jpeg",
+  //   title: "Our Objective Towards",
+  // },
 ];
 
 export default function HeroSlider() {
